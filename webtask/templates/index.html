@@ -1,0 +1,27 @@
+{% extends 'admin/base.html' %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+    Время учёбы
+</div>
+{% endblock %}
+
+{% block content %}
+<h1>Время учёбы</h1>
+<form method="POST" enctype="multipart/form-data" action="{% url 'lesson_time' %}">
+    {% csrf_token %}
+    <p>
+        Ввод осуществлять через запятую, например: 1594663340, 1594663389, 1594663390, 1594663395, 1594663396, 1594666472
+    </p>
+    <br>
+    <div>        
+        <p>Интервалы присутствия ученика</p>
+        <input type="text" size="50" name='pupil'>
+        <br>
+        <p>Интервалы присутствия учителя</p>
+        <input type="text" size="50" name='tutor'>
+        <br>
+        <input type="submit" name='action' value="Посчитать">
+    </div>
+</form>
+{% endblock %}

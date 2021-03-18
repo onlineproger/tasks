@@ -1,0 +1,19 @@
+{% extends 'admin/base.html' %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+    <a href="/">Время учёбы</a> › Результат
+</div>
+{% endblock %}
+
+{% block content %}
+<h1>Результат</h1>
+
+<div>
+    <p>Учитель присутстовал на уроке {{tutor_res}} секунд.</p>
+    <br>
+    <p>Ученик присутстовал на уроке {{pupil_res}} секунд.</p>
+</div>
+
+
+{% endblock %}
